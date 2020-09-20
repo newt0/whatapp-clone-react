@@ -17,7 +17,7 @@ function Chat() {
   const sendMessage = (e) => {
     e.prevent.default();
     // console.log("You typed >>>", input);
-    setInput("")
+    setInput("");
   };
 
   return (
