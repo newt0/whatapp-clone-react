@@ -84,9 +84,9 @@
   border: none;
 }
 
-.chat__footer > form > button {
+/* .chat__footer > form > button {
   display: none;
-}
+} */
 
 .chat__footer > .MuiSvgIcon-root {
   padding: 10px;

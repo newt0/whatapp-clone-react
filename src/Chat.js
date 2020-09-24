@@ -36,7 +36,7 @@ function Chat() {
 
   const sendMessage = (e) => {
     e.preventDefault();
-    // console.log("You typed >>>", input);
+    console.log("You typed >>>", input);
     setInput("");
   };
 
@@ -96,5 +96,5 @@ function Chat() {
 
 export default Chat;
 
-// memo: Even though "preventDefault()" is set, every time the Submit button is clicked, the screen is updated.　Because of this, the store was also hindered.
+// memo: Even though "preventDefault()" is set, every time the Submit button is clicked, the screen is updated. ÚÚBecause of this, the store was also hindered.
 // The cause was just a typo, which I had written prevent.default()

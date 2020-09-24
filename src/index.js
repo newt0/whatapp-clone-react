@@ -22,3 +22,5 @@ serviceWorker.unregister();
 
 // memo: I missed like below. It doesn't mean what I wanted to do.
 // import  StateProvider  from "./StateProvider";
+
+// memo: <StateProvider></StateProvider> is wrapper for <App /> and it's a data layer. We can pull and push it from any components.

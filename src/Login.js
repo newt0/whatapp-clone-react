@@ -6,7 +6,7 @@ import { useStateValue } from "./StateProvider";
 import { actionTypes } from "./reducer";
 
 function Login() {
-  const [{}, dispatch] = useStateValue();
+  const [{}, dispatch] = useStateValue(); // {}: In this case, we don't use any state from data layer.
 
   const signIn = () => {
     auth

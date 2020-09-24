@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 
 function App() {
-  // const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null); before useStateValue
   const [{ user }, dispatch] = useStateValue();
 
   return (
