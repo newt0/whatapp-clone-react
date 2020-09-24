@@ -46,6 +46,9 @@ function Chat() {
       message: input,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
+
+    console.log("timestamp is >>>", messages.timestamp);
+
     setInput("");
   };
 
@@ -56,7 +59,7 @@ function Chat() {
         <div className="chat__headerInfo">
           <h3>{roomName}</h3>
           <p>
-            last seen {" "}
+            last seen{" "}
             {new Date(
               messages[messages.length - 1]?.timestamp?.toDate()
             ).toUTCString()}
@@ -87,7 +90,7 @@ function Chat() {
               <span className="chat__name">{message.name}</span>
               {message.message}
               <span className="chat__timestamp">
-                {new Date(messages.timestamp?.toDate()).toUTCString()}
+                {new Date(message.timestamp?.toDate()).toUTCString()}
               </span>
             </p>
           </>
