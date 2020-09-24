@@ -1,4 +1,4 @@
-// memo: initialState is how the data layer looks before we've added to it before anything  
+// memo: initialState is how the data layer looks before we've added to it before anything
 export const initialState = {
   user: null,
 };
@@ -22,4 +22,4 @@ const reducer = (state, action) => {
   }
 };
 
-export default reducer
+export default reducer;
