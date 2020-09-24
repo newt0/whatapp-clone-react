@@ -42,7 +42,7 @@ function Chat() {
     console.log("You typed >>>", input);
 
     db.collection("rooms").doc(roomId).collection("messages").add({
-      name: user.displayName,
+      name: user?.displayName,
       message: input,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
@@ -55,7 +55,12 @@ function Chat() {
         <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
         <div className="chat__headerInfo">
           <h3>{roomName}</h3>
-          <p>Last seen at...</p>
+          <p>
+            last seen {" "}
+            {new Date(
+              messages[messages.length - 1]?.timestamp?.toDate()
+            ).toUTCString()}
+          </p>
         </div>
 
         <div className="chat__headerRight">
@@ -82,7 +87,7 @@ function Chat() {
               <span className="chat__name">{message.name}</span>
               {message.message}
               <span className="chat__timestamp">
-                {new Date(message.timestamp?.toDate()).toUTCString()}
+                {new Date(messages.timestamp?.toDate()).toUTCString()}
               </span>
             </p>
           </>
